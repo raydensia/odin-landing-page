@@ -1,17 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', Courier, monospace;
-    margin: 0;
-
     display: flex;
     flex-direction: column;
-  }
-
-img {
-    width:100px;
-    height:100px;
-    background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
 }
 
 a {
@@ -22,16 +62,15 @@ a {
 button {
     background-color: #3882F6;
     color: white;
-    border-radius: 5px;
-    width:100px;
-    height: 40px;
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 .header-links {
     list-style-type: none;
     display: flex;
-    font-size: 18px;
-    gap: 16px;
+    font-size: 1rem;
+    gap: 1rem;
     color: #E5E7EB;
 }
 
@@ -40,12 +79,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15vw 5vh;
+    padding: 1rem 15vw 3rem;
+    border: none;
 }
 
 .header-logo {
     color: #F9FAF8;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -54,7 +94,10 @@ button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 15vw 10vh;
+    padding: 0 15vw 3rem;
+
+    border: none;
+    gap: 4rem;
 }
 
 .hero-container {
@@ -63,25 +106,27 @@ button {
     flex: 1;
 }
 
+
 .hero-image {
-    width: 40%;
-    height:fit-content;
-    min-width: 400px;
-    /* width: 500px; */
-    /* height: 300px; */
+    display: flex;
+    background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
+    /* min-width: 100px; */
+    min-width: 5rem;
     flex: 1;
     align-self: center;
 }
 
 .hero-text {
-    font-size: 48px;
+    font-size: 2.6rem;
     font-weight: 700;
     color: #F9FAF8;
-    padding-right: 15px;
+    padding-right: 1rem;
+    line-height: 3rem;
 }
 
 .hero-subtext {
-    font-size: 18px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #E5E7EB;
     padding: 0 1vw 1vh 0;
     
@@ -90,25 +135,27 @@ button {
 .hero-button {
     border-color: #3882F6;
     border-style: solid;
+    flex-grow: 0;
+    min-width: 3rem;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    padding: 5vh 15vw 10vh;
-}
-
-.info-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1F2937;
-    text-align: center;
-    padding-bottom: 2vh;
+    padding: 4.5rem 15vw 4.5rem;
 }
 
 .info-wrapper {
     display: flex;
-    gap: 1vw;
+    gap: 1rem;
+}
+
+.info-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1F2937;
+    text-align: center;
+    padding-bottom: 1.5rem;
 }
 
 .info-descriptor {
@@ -116,35 +163,36 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1vh;
 }
 
 .quote {
     background-color: #E5E7EB;
-    padding: 10vh 15vw 10vh;
+    padding: 4.5rem 15vw 4.5rem;
 }
 
 .quote-text {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-style: italic;
     font-weight: 100;
+    padding-bottom: 1.5rem;
 }
 
 .quote-subtext {
     text-align: right;
-    padding-top: 1vh;
 }
+
+.call-to-action {
+    padding: 4.5rem 15vw 4.5rem;
+}
+
 
 .cta-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #3882F6;
-
-    padding: 3vh 4vw;
-    margin: 10vh 15vw 10vh;
-
-    border-radius: 20px;
+    padding: 2rem 2rem;
+    border-radius: 1.5rem;
 }
 
 .cta-text-container {
@@ -154,18 +202,20 @@ button {
 
 .cta-text {
     color:#F9FAF8;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .cta-subtext {
     color: #E5E7EB;
     font-weight: 300;
+    padding-right: 1rem;
 }
 
 .cta-button {
     border-color: white;
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.125rem;
+    flex-shrink: 0;
 
 }
 
@@ -174,7 +224,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
     color: #F9FAF8;
+    padding: 1.5rem;
 }
 
