@@ -52,6 +52,7 @@ body {
     font-family: 'Roboto', Courier, monospace;
     display: flex;
     flex-direction: column;
+    /* padding: 1.5rem 15vw 1.5rem; */
 }
 
 a {
@@ -79,7 +80,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 15vw 1.5rem;
+    padding: 1.5rem calc(15vw - 5vh) 3rem;
     border: none;
 }
 
@@ -91,10 +92,11 @@ button {
 
 .hero {
     background-color: #1F2937;
+    background-size: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.5rem 15vw 3rem;
+    padding: 1.5rem calc(15vw - 5vh) 3rem;
     border: none;
     gap: 4rem;
 }
@@ -134,27 +136,30 @@ button {
 .hero-button {
     border-color: #3882F6;
     border-style: solid;
-    flex-grow: 0;
-    min-width: 3rem;
+    /* flex: 0 0 0; */
+    width: 50%;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    padding: 4.5rem 15vw 4.5rem;
-}
-
-.info-wrapper {
-    display: flex;
-    gap: 1rem;
+    align-items: center;
+    padding: 1.5rem calc(15vw - 5vh) 3rem;
 }
 
 .info-title {
     font-size: 2rem;
     font-weight: 700;
     color: #1F2937;
-    text-align: center;
     padding-bottom: 1.5rem;
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* width: 220px; */
 }
 
 .info-descriptor {
@@ -162,11 +167,22 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-width: 20%;
+	/* font-size: clamp(0.5rem, 5vw, 1rem); */
+}
+
+.info-descriptor img {
+    /* height: 100px; */
+    width: fit-content;
+}
+
+.info-text {
+    width: 20ch;
 }
 
 .quote {
     background-color: #E5E7EB;
-    padding: 4.5rem 15vw 4.5rem;
+    padding: 1.5rem calc(15vw - 5vh) 3rem;
 }
 
 .quote-text {
@@ -181,7 +197,7 @@ button {
 }
 
 .call-to-action {
-    padding: 4.5rem 15vw 4.5rem;
+    padding: 1.5rem calc(15vw - 5vh) 3rem;
 }
 
 
